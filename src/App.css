@@ -1,0 +1,77 @@
+:root {
+  --nav-footer: #5133a3;
+  --box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+ul.nav {
+  position: relative;
+  margin: 0;
+  background-color: var(--nav-footer);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: var(--box-shadow);
+}
+
+.banner-content {
+  font-size: 1.2rem;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+ul.nav li {
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+li.begin {
+  display: none;
+}
+
+.banner {
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  height: 350px;
+  background-image: url('./images/clouds.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  ul.nav li {
+    display: block;
+    font-size: 1.2rem;
+  }
+  .banner-content {
+    font-size: 1.5rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  ul.nav li {
+    font-size: 1.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
