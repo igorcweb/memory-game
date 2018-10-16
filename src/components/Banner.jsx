@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <div class="banner">
+    <div className="banner">
       <div className="banner-content">
         <h2>Clicky Memory Game!</h2>
         <h3>

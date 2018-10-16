@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "img": "./images/1.png",
+    "clicked": false
+  },
+  {
+    "id": 2,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/BarneyBikini.gif",
+    "clicked": false
+  },
+  {
+    "id": 3,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/Apu1.gif",
+    "clicked": false
+  },
+  {
+    "id": 4,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/MrBurns4.gif",
+    "clicked": false
+  },
+  {
+    "id": 5,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/Cletus1.gif",
+    "clicked": false
+  },
+  {
+    "id": 6,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/Duffman.gif",
+    "clicked": false
+  },
+  {
+    "id": 7,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/NedFlanders2.gif",
+    "clicked": false
+  },
+  {
+    "id": 8,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/Krusty8.gif",
+    "clicked": false
+  },
+  {
+    "id": 9,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/Milhouse2.gif",
+    "clicked": false
+  },
+  {
+    "id": 10,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/GroundskeeperWilly1.gif",
+    "clicked": false
+  },
+  {
+    "id": 11,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/RalphWiggum4.gif",
+    "clicked": false
+  },
+  {
+    "id": 12,
+    "img": "http://www.simpsoncrazy.com/content/pictures/regulars/MoeSzyslak1.gif",
+    "clicked": false
+  }
+]
