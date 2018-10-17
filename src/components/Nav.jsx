@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 class Nav extends Component {
   state = {
     score: 0,
-    topScore: 0
+    topScore: 0,
+    message: 'Click an image to begin!'
   };
   render() {
     return (
@@ -11,7 +12,7 @@ class Nav extends Component {
         <a href="/">
           <li>Clicky Game</li>
         </a>
-        <li className="begin">Click an image to begin!</li>
+        <li className="begin">{this.state.message}</li>
         <li>
           Score: <span id="score">{this.state.score}</span> | Top Score:{' '}
           <span id="top-score">{this.state.topScore}</span>

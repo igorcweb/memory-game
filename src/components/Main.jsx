@@ -6,22 +6,32 @@ export default class Main extends Component {
   state = {
     toons
   };
+
+  handleClick = id => {
+    console.log(id);
+  };
+
+  getToonById = id => {
+    return toons.find(toon => toon.id === id);
+  };
+
+  shuffleTunes = () => {
+    const shuffledToons = shuffle(toons);
+    this.setState({ toons: shuffledToons });
+  };
+
+  componentWillMount() {
+    this.shuffleTunes();
+  }
   render() {
-    const getToonById = id => {
-      return toons.find(toon => toon.id === id);
-    };
-    //Shuffle ids
-    const toonsIds = shuffle(toons.map(toon => toon.id));
-    //Get images by id
-    return toonsIds.map(toonId => {
-      const toon = getToonById(toonId);
-      console.log(toon.img);
+    return this.state.toons.map(toon => {
       return (
         <img
           className="toon"
-          key={toonId}
+          key={toon.id}
           src={require(`../images/${toon.img}`)}
           alt={toon.id}
+          onClick={() => this.handleClick(toon.id)}
         />
       );
     });
