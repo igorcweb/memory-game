@@ -22,6 +22,10 @@ ul.nav {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+li.begin {
+  position: relative;
+}
+
 .banner-content {
   padding-top: 100px;
   font-size: 1.2rem;
@@ -108,6 +112,9 @@ img.footer {
   .banner-content {
     font-size: 1.5rem;
   }
+  li.begin {
+    left: 10px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -118,10 +125,16 @@ img.footer {
   ul.nav li {
     font-size: 1.5rem;
   }
+  li.begin {
+    left: 30px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  li.begin {
+    left: 40px;
+  }
   .main {
     width: 930px;
   }

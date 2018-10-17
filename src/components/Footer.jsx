@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <div className="footer">
-      <p className="footer">Clicky Game</p>
+      <p className="footer">Clicky Memory Game</p>
       <img
         className="footer"
         src={require('../images/react.svg')}
