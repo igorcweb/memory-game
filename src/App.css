@@ -1,10 +1,16 @@
 :root {
   --nav-footer: #5133a3;
-  --box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+body {
+  background-color: #fafafa;
 }
 
 ul.nav {
-  position: relative;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
   margin: 0;
   background-color: var(--nav-footer);
   color: #fff;
@@ -13,15 +19,13 @@ ul.nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  box-shadow: var(--box-shadow);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .banner-content {
+  padding-top: 100px;
   font-size: 1.2rem;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+  margin: 0 20px;
 }
 
 ul.nav li {
@@ -42,6 +46,7 @@ li.begin {
 
 .banner {
   margin: 0;
+  margin-bottom: 40px;
   text-align: center;
   color: #fff;
   height: 350px;
@@ -50,8 +55,52 @@ li.begin {
   background-position: center;
 }
 
+.main {
+  margin: 0 auto;
+  margin-bottom: 40px;
+  width: 230px;
+}
+
+img.toon {
+  cursor: pointer;
+  height: 170px;
+  width: 170px;
+  padding: 5px;
+  border: 5px solid #f1f1f1;
+  margin: 8px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+img.toon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition: 0.1s;
+}
+
+div.footer {
+  background-color: var(--nav-footer);
+}
+p.footer {
+  margin: 0;
+  display: inline-block;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+
+img.footer {
+  display: inline-block;
+  position: relative;
+  top: 7px;
+  width: 24px;
+  height: 24px;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  .main {
+    width: 460px;
+  }
   ul.nav li {
     display: block;
     font-size: 1.2rem;
@@ -63,6 +112,9 @@ li.begin {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .main {
+    width: 690px;
+  }
   ul.nav li {
     font-size: 1.5rem;
   }
@@ -70,6 +122,9 @@ li.begin {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .main {
+    width: 930px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

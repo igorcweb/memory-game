@@ -1,10 +1,29 @@
 import React, { Component } from 'react';
+import { shuffle } from '../utils';
+import toons from '../toons.json';
 
 export default class Main extends Component {
+  state = {
+    toons
+  };
   render() {
-    const images = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    return images.map(image => {
-      return <img src={require(`../images/${image}.png`)} alt={image} />;
+    const getToonById = id => {
+      return toons.find(toon => toon.id === id);
+    };
+    //Shuffle ids
+    const toonsIds = shuffle(toons.map(toon => toon.id));
+    //Get images by id
+    return toonsIds.map(toonId => {
+      const toon = getToonById(toonId);
+      console.log(toon.img);
+      return (
+        <img
+          className="toon"
+          key={toonId}
+          src={require(`../images/${toon.img}`)}
+          alt={toon.id}
+        />
+      );
     });
   }
 }
