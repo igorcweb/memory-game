@@ -11,7 +11,7 @@ class App extends Component {
       <div className="App">
         <Nav />
         <Banner />
-        <div className="main">
+        <div className="Main">
           <Main />
         </div>
         <Footer />
