@@ -13,13 +13,14 @@ export default class Main extends Component {
 
   handleClick = id => {
     const toon = this.getToonById(id);
-    console.log(toon.id);
-    this.state.toons.forEach((t, index) => {
+    const newToons = this.state.toons;
+    newToons.forEach(t => {
       if (t.id === toon.id) {
-        console.log(this.state.toons[index]);
-        this.setState({ [this.state.toons[index]]: { clicked: true } });
+        t.clicked = true;
       }
+      this.setState({ toons: newToons });
     });
+    console.log(this.state);
   };
 
   shuffleToons = () => {
