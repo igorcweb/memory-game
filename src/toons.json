@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "img": "1.png",
+    "img": "carlson.png",
     "clicked": false
   },
   {
     "id": 2,
-    "img": "2.png",
+    "img": "cheburashka.png",
     "clicked": false
   },
   {
     "id": 3,
-    "img": "3.png",
+    "img": "masha.png",
     "clicked": false
   },
   {
     "id": 4,
-    "img": "4.png",
+    "img": "bear.png",
     "clicked": false
   },
   {
     "id": 5,
-    "img": "5.png",
+    "img": "pirate.png",
     "clicked": false
   },
   {
     "id": 6,
-    "img": "6.png",
+    "img": "wolf.png",
     "clicked": false
   },
   {
     "id": 7,
-    "img": "7.png",
+    "img": "gena.png",
     "clicked": false
   },
   {
     "id": 8,
-    "img": "8.png",
+    "img": "vrungel.png",
     "clicked": false
   },
   {
     "id": 9,
-    "img": "9.png",
+    "img": "lion.png",
     "clicked": false
   },
   {
     "id": 10,
-    "img": "10.png",
+    "img": "owl.png",
     "clicked": false
   },
   {
     "id": 11,
-    "img": "11.png",
+    "img": "parakeet.png",
     "clicked": false
   },
   {
     "id": 12,
-    "img": "12.png",
+    "img": "mouse.png",
     "clicked": false
   }
 ]
