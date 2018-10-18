@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Nav extends Component {
   render() {
+    const { score, topScore, message } = this.props.game;
     return (
       <ul className="nav">
         <a href="/">
           <li>Clicky Game</li>
         </a>
-        <li className="begin">{this.props.message}</li>
+        <li className="begin">{message}</li>
         <li>
-          Score: <span id="score">{this.props.score}</span> | Top Score:{' '}
-          <span id="top-score">{this.props.topScore}</span>
+          Score: <span id="score">{score}</span> | Top Score:{' '}
+          <span id="top-score">{topScore}</span>
         </li>
       </ul>
     );
   }
 }
 
-export default Nav;
+const mapStateToProps = ({ game }) => {
+  return {
+    game
+  };
+};
+
+export default connect(mapStateToProps)(Nav);

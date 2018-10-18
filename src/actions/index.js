@@ -1,0 +1,5 @@
+export const INCREASE_SCORE = 'INCREASE_SCORE';
+export const RESET_SCORE = 'RESET_SCORE';
+export const INCREASE_TOP_SCORE = 'INCREASE_TOP_SCORE';
+export const RESET_TOP_SCORE = 'RESET_TOP_SCORE';
+export const SET_MESSAGE = 'SET_MESSAGE';

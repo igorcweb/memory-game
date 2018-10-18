@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { shuffle } from '../utils';
 import toons from '../toons.json';
+import {
+  increaseScore,
+  resetScore,
+  increaseTopScore,
+  resetTopScore,
+  setMessage
+} from '../actions/game';
 
-let message = 'Click an image to begin!',
-  score = 0,
-  topScore = 0;
+const initialState = { ...toons };
 
 class Main extends Component {
+  state = {
+    toons
+  };
   getToonById = id => {
     return toons.find(toon => toon.id === id);
   };
@@ -14,34 +24,41 @@ class Main extends Component {
   shuffleToons = () => {
     const shuffledToons = shuffle(toons);
     this.setState({
-      toons: shuffledToons,
-      score: this.state ? this.state.score : score,
-      topScore: this.state ? this.state.topScore : topScore,
-      message: this.state ? this.state.message : message
+      toons: shuffledToons
     });
   };
 
   handleClick = id => {
+    const { score, topScore } = this.props.game;
     const toon = this.getToonById(id);
-    const newToons = this.state.toons;
-    let newMessage = this.state.message;
-    console.log(newMessage);
+    let newToons = this.state.toons;
     newToons.forEach(t => {
       if (t.id === toon.id) {
         if (toon.clicked === true) {
-          newMessage = 'You already clicked on this one!';
-          score = 0;
+          this.setState({ toons: initialState });
+          console.log('state', this.state);
+          console.log('initial', initialState);
+          this.props.resetScore();
+          this.props.setMessage('You already guessed this one!');
         } else {
           t.clicked = true;
-          score++;
+          this.props.increaseScore();
+          if (topScore <= score) {
+            this.props.increaseTopScore();
+          }
+          if (score < 11) {
+            this.props.setMessage('Correct!');
+            this.setState({
+              toons: newToons
+            });
+          } else {
+            this.props.setMessage('You win!');
+            this.setState({ toons });
+            console.log(this.state);
+          }
         }
       }
-      this.setState({
-        toons: newToons,
-        message: newMessage
-      });
     });
-    console.log(this.state);
     this.shuffleToons();
   };
 
@@ -64,4 +81,25 @@ class Main extends Component {
   }
 }
 
-export default Main;
+const mapStateToProps = ({ game }) => {
+  return {
+    game
+  };
+};
+
+const matchDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      increaseScore,
+      resetScore,
+      increaseTopScore,
+      resetTopScore,
+      setMessage
+    },
+    dispatch
+  );
+
+export default connect(
+  mapStateToProps,
+  matchDispatchToProps
+)(Main);
