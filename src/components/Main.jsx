@@ -54,7 +54,6 @@ class Main extends Component {
             this.props.setMessage('You win!');
             this.resetToons(newToons);
             this.props.resetScore();
-            console.log(this.state);
           }
         }
       }
