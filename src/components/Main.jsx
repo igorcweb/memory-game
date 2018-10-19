@@ -49,7 +49,10 @@ class Main extends Component {
             this.props.increaseTopScore();
           }
           if (score < 11) {
-            this.props.setMessage('Correct!');
+            this.props.setMessage('');
+            setTimeout(() => {
+              this.props.setMessage('Correct!');
+            }, 100);
           } else {
             this.props.setMessage('You win!');
             this.resetToons(newToons);
