@@ -27,9 +27,7 @@ class Main extends Component {
   };
 
   resetToons = toons => {
-    toons.map(toon => {
-      return (toon.clicked = false);
-    });
+    toons.map(toon => (toon.clicked = false));
   };
 
   handleClick = id => {
