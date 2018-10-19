@@ -11,8 +11,6 @@ import {
   setMessage
 } from '../actions/game';
 
-const initialState = { ...toons };
-
 class Main extends Component {
   state = {
     toons
@@ -22,24 +20,28 @@ class Main extends Component {
   };
 
   shuffleToons = () => {
-    const shuffledToons = shuffle(toons);
+    const shuffledToons = [...shuffle(toons)];
     this.setState({
       toons: shuffledToons
     });
   };
 
+  resetToons = toons => {
+    toons.map(toon => {
+      return (toon.clicked = false);
+    });
+  };
+
   handleClick = id => {
-    const { score, topScore } = this.props.game;
+    let { score, topScore } = this.props.game;
     const toon = this.getToonById(id);
     let newToons = this.state.toons;
     newToons.forEach(t => {
       if (t.id === toon.id) {
         if (toon.clicked === true) {
-          this.setState({ toons: initialState });
-          console.log('state', this.state);
-          console.log('initial', initialState);
+          this.resetToons(newToons);
           this.props.resetScore();
-          this.props.setMessage('You already guessed this one!');
+          this.props.setMessage('You already clicked this one!');
         } else {
           t.clicked = true;
           this.props.increaseScore();
@@ -48,12 +50,10 @@ class Main extends Component {
           }
           if (score < 11) {
             this.props.setMessage('Correct!');
-            this.setState({
-              toons: newToons
-            });
           } else {
             this.props.setMessage('You win!');
-            this.setState({ toons });
+            this.resetToons(newToons);
+            this.props.resetScore();
             console.log(this.state);
           }
         }
@@ -67,6 +67,7 @@ class Main extends Component {
   }
 
   render() {
+    console.log('state', this.state);
     return this.state.toons.map(toon => {
       return (
         <img

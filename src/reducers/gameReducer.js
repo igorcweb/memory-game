@@ -17,11 +17,11 @@ export default (state = defaultState, action) => {
     case INCREASE_SCORE:
       return { ...state, score: state.score + 1 };
     case RESET_SCORE:
-      return { ...state, score: (state.score = 0) };
+      return { ...state, score: 0 };
     case INCREASE_TOP_SCORE:
       return { ...state, topScore: state.topScore + 1 };
     case RESET_TOP_SCORE:
-      return { ...state, topScore: (state.score = 0) };
+      return { ...state, topScore: 0 };
     case SET_MESSAGE:
       return { ...state, message: action.payload };
     default:

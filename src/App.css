@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #fafafa;
+  background-color: #f3f3f3;
 }
 
 ul.nav {
@@ -66,6 +66,7 @@ li.begin {
 }
 
 img.toon {
+  background-color: #fff;
   cursor: pointer;
   height: 170px;
   width: 170px;
