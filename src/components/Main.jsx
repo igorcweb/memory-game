@@ -41,7 +41,7 @@ class Main extends Component {
         if (toon.clicked === true) {
           this.resetToons(newToons);
           this.props.resetScore();
-          this.props.setMessage('You already clicked this one!');
+          this.props.setMessage('Try again!');
         } else {
           t.clicked = true;
           this.props.increaseScore();

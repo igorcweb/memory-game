@@ -7,10 +7,10 @@ class Nav extends Component {
     return (
       <ul className="nav">
         <a href="/">
-          <li>Clicky Game</li>
+          <li class="title">Clicky Game</li>
         </a>
-        <li className="begin">{message}</li>
-        <li>
+        <li className="message">{message}</li>
+        <li class="score">
           Score: <span id="score">{score}</span> | Top Score:{' '}
           <span id="top-score">{topScore}</span>
         </li>
