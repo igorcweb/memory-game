@@ -153,8 +153,11 @@ img.footer {
   .Main {
     width: 930px;
   }
-}
+  li.title {
+    margin-left: 30px;
+  }
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+  li.score {
+    margin-right: 30px;
+  }
 }

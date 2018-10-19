@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer() {
+const Footer = () => {
   return (
     <div className="footer">
       <p className="footer">Clicky Memory Game</p>
@@ -11,6 +11,6 @@ function Footer() {
       />
     </div>
   );
-}
+};
 
 export default Footer;
