@@ -90,6 +90,7 @@ img.toon:hover {
 }
 
 div.footer {
+  text-align: center;
   background-color: var(--nav-footer);
 }
 p.footer {
