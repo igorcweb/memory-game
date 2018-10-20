@@ -48,7 +48,7 @@ ul.nav li {
   font-size: 1.1rem;
 }
 
-a {
+li.title {
   color: #fff;
   text-decoration: none;
   cursor: pointer;

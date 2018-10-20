@@ -6,9 +6,9 @@ class Nav extends Component {
     const { score, topScore, message } = this.props.game;
     return (
       <ul className="nav">
-        <a href={window.location.href}>
-          <li className="title">Clicky Game</li>
-        </a>
+        <li onClick={() => window.location.reload()} className="title">
+          Clicky Game
+        </li>
         <li className="message">{message}</li>
         <li className="score">
           Score: <span id="score">{score}</span> | Top Score:{' '}
