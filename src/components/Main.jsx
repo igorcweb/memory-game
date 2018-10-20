@@ -67,7 +67,6 @@ class Main extends Component {
   }
 
   render() {
-    console.log('state', this.state);
     return this.state.toons.map(toon => {
       return (
         <img
